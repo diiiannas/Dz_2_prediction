@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101116">
+    <meta name="description" content="Задай вопрос и узнай, что предскажет магический шар.">
+    <title>Шар предсказаний</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <p class="eyebrow"><span class="sparkle" aria-hidden="true">✦</span> ТВОЙ ЛИЧНЫЙ ОРАКУЛ</p>
+        <h1>Шар <span>предсказаний</span></h1>
+        <p class="subtitle">Сосредоточься на вопросе. Шар уже знает ответ.</p>
+      </header>
+
+      <section class="oracle" aria-label="Магический шар">
+        <div class="orb" aria-live="polite" aria-atomic="true">
+          <div class="orb-shine" aria-hidden="true"></div>
+          <div class="answer-window">
+            <span class="answer" id="answer">8</span>
+          </div>
+        </div>
+        <p class="orb-caption" id="orb-caption">ШАР ЖДЁТ ТВОЙ ВОПРОС</p>
+      </section>
+
+      <form class="question-form" id="question-form">
+        <label for="question">О чём хочешь спросить?</label>
+        <div class="input-wrap">
+          <input id="question" name="question" type="text" maxlength="240" placeholder="Например: Стоит ли мне рискнуть?" autocomplete="off" required>
+          <span class="input-icon" aria-hidden="true">↗</span>
+        </div>
+        <button id="ask-button" type="submit">
+          <span>Спросить шар</span><span class="button-arrow" aria-hidden="true">→</span>
+        </button>
+        <p class="message" id="message" role="status" aria-live="polite"></p>
+      </form>
+
+      <footer>Слушай интуицию. Остальное — магия.</footer>
+    </main>
+  </body>
+</html>

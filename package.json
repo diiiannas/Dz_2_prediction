@@ -1,0 +1,13 @@
+{
+  "name": "magic-8-ball",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Русский веб-шар предсказаний",
+  "scripts": {
+    "start": "node server.js",
+    "deploy": "npx vercel --prod --yes"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
